@@ -66,6 +66,7 @@ h6 {
   [data-aos-delay] {
     transition-delay: 0 !important;
   }
+
 }
 
 /*--------------------------------------------------------------
@@ -109,6 +110,15 @@ h6 {
 
 #topbar .cta a:hover {
   background: #ff6b3b;
+}
+
+@media screen and (max-width: 768px) {
+  
+  #topbar{
+    height:50px;
+  }
+
+  
 }
 
 /*--------------------------------------------------------------
