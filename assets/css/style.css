@@ -2,13 +2,21 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+ 
+
+:root {
+  --primary: #fe8721;
+  --primaryTransparent: rgba(254, 135, 33, 0.7);
+  --secondary: #3F363B;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
   color: #313030;
 }
 
 a {
-  color: #ff5821;
+  color: var(--primary);
   text-decoration: none;
 }
 
@@ -26,6 +34,35 @@ h6 {
   font-family: "Raleway", sans-serif;
 }
 
+body{
+  color: var(--secondary) !important;
+
+}
+
+.dropdown .btn{
+  background: var(--primary);
+  color: #fff;
+}
+
+.dropdown h6{
+  background: #f0f0f0;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  /* color: #fff; */
+  text-align: center;
+
+}
+
+.dropdown-item{
+  border-top:1px solid #e6e6e6;
+}
+.dropdown-item:hover{
+ 
+  color: var(--primary);
+  background: none;
+}
+
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
@@ -36,7 +73,7 @@ h6 {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: #ff5821;
+  background: var(--primary);
   width: 40px;
   height: 40px;
   border-radius: 4px;
@@ -82,7 +119,7 @@ h6 {
 
 #topbar .contact-info i {
   font-style: normal;
-  color: #ff5821;
+  color: var(--primary);
 }
 
 #topbar .contact-info i a,
@@ -97,12 +134,12 @@ h6 {
 }
 
 #topbar .contact-info i a:hover {
-  color: #ff5821;
+  color: var(--primary);
 }
 
 #topbar .cta a {
   color: #fff;
-  background: #ff5821;
+  background: var(--primary);
   padding: 10px 20px;
   display: inline-block;
   transition: 0.3s;
@@ -209,12 +246,12 @@ h6 {
 .navbar .active,
 .navbar .active:focus,
 .navbar li:hover>a {
-  color: #ff5821;
+  color: var(--primary);
 }
 
 .navbar .getstarted,
 .navbar .getstarted:focus {
-  background: #ff5821;
+  background: var(--primary);
   padding: 8px 20px;
   margin-left: 30px;
   border-radius: 4px;
@@ -258,7 +295,7 @@ h6 {
 .navbar .dropdown ul a:hover,
 .navbar .dropdown ul .active:hover,
 .navbar .dropdown ul li:hover>a {
-  color: #ff5821;
+  color: var(--primary);
 }
 
 .navbar .dropdown:hover>ul {
@@ -358,7 +395,7 @@ h6 {
 .navbar-mobile a:hover,
 .navbar-mobile .active,
 .navbar-mobile li:hover>a {
-  color: #ff5821;
+  color: var(--primary);
 }
 
 .navbar-mobile .getstarted,
@@ -393,7 +430,7 @@ h6 {
 .navbar-mobile .dropdown ul a:hover,
 .navbar-mobile .dropdown ul .active:hover,
 .navbar-mobile .dropdown ul li:hover>a {
-  color: #ff5821;
+  color: var(--primary);
 }
 
 .navbar-mobile .dropdown>.dropdown-active {
@@ -445,7 +482,7 @@ h6 {
 
 #hero .get-started-icon {
   font-size: 24px;
-  background: #ff5821;
+  background: var(--primary);
   padding: 14px;
   color: #fff;
   border-radius: 50px;
@@ -471,7 +508,7 @@ h6 {
 }
 
 #hero .btn-get-started:hover {
-  background: #ff5821;
+  background: var(--primary);
 }
 
 @media (min-width: 1024px) {
@@ -586,7 +623,8 @@ section {
 
 .why-us .content {
   padding: 30px;
-  background: #ff5821;
+  background: var(--primaryTransparent);
+  backdrop-filter: blur(10px);
   border-radius: 4px;
   color: #fff;
 }
@@ -615,7 +653,7 @@ section {
 }
 
 .why-us .content .more-btn:hover {
-  color: #ff5821;
+  color: var(--primary);
   background: #fff;
 }
 
@@ -630,7 +668,7 @@ section {
 
 .why-us .icon-boxes .icon-box i {
   font-size: 40px;
-  color: #ff5821;
+  color: var(--primary);
   margin-bottom: 30px;
 }
 
@@ -679,13 +717,13 @@ section {
 }
 
 .about .icon-box .icon i {
-  color: #ff5821;
+  color: var(--primary);
   font-size: 32px;
 }
 
 .about .icon-box:hover .icon {
-  background: #ff5821;
-  border-color: #ff5821;
+  background: var(--primary);
+  border-color: var(--primary);
 }
 
 .about .icon-box:hover .icon i {
@@ -705,7 +743,7 @@ section {
 }
 
 .about .icon-box .title a:hover {
-  color: #ff5821;
+  color: var(--primary);
 }
 
 .about .icon-box .description {
@@ -723,7 +761,7 @@ section {
 .about .play-btn {
   width: 94px;
   height: 94px;
-  background: radial-gradient(#ff5821 50%, rgba(255, 88, 33, 0.4) 52%);
+  background: radial-gradient(var(--primary) 50%, rgba(255, 88, 33, 0.4) 52%);
   border-radius: 50%;
   display: block;
   position: absolute;
@@ -771,7 +809,7 @@ section {
 }
 
 .about .play-btn:hover::after {
-  border-left: 15px solid #ff5821;
+  border-left: 15px solid var(--primary);
   transform: scale(20);
 }
 
@@ -861,11 +899,11 @@ section {
   height: 12px;
   background-color: #fff;
   opacity: 1;
-  border: 1px solid #ff5821;
+  border: 1px solid var(--primary);
 }
 
 .clients .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #ff5821;
+  background-color: var(--primary);
 }
 
 .clients .swiper-slide img {
@@ -912,7 +950,7 @@ section {
 } */
 
 .services h2 {
-  color:#ff5821;
+  color:var(--primary);
   text-shadow: 1px -3px 2px #000;
 }
 
@@ -948,7 +986,7 @@ section {
   text-align: center;
   width: 72px;
   height: 72px;
-  background: #ff5821;
+  background: var(--primary);
 }
 
 .services .icon i {
@@ -970,15 +1008,21 @@ section {
 
 .services .icon-box:hover .icon {
   background: #fff;
-  border: 2px solid #ff5821;
+  border: 2px solid var(--primary);
 }
 
 .services .icon-box:hover .icon i {
-  color: #ff5821;
+  color: var(--primary);
 }
 
 .services .icon-box:hover .title a {
-  color: #ff5821;
+  color: var(--primary);
+  letter-spacing: 1.5px;
+  transition: 0.2s all ease-in-out;
+  -webkit-transition: 0.2s all ease-in-out;
+  -moz-transition: 0.2s all ease-in-out;
+  -ms-transition: 0.2s all ease-in-out;
+  -o-transition: 0.2s all ease-in-out;
 }
 
 .services .description {
@@ -1079,7 +1123,7 @@ section {
 }
 
 .testimonials .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #ff5821;
+  background-color: var(--primary);
 }
 
 @media (min-width: 992px) {
@@ -1094,11 +1138,14 @@ section {
   background: #f0f0f0;
 }
 
-.products-tile img{ 
+.products-tile img{
   border-radius: 20px;
+  filter: grayscale(1);
+  -webkit-filter: grayscale(1);
 }
 .product-detail-box {  
-  background: rgba(0,0,0,0.3);
+  background: var(--primaryTransparent);
+  /* background: rgba(0,0,0,0.3); */
   color: #fff;
   backdrop-filter: blur(10px);
   border-radius: 20px; 
@@ -1109,18 +1156,19 @@ section {
   letter-spacing: 0.5px;
 
 }
-.product-detail-box:hover  {
+/* 
+.products-tile:hover .product-detail-box {
   background: rgb(255 88 33 / 87%);
   transition: 0.4s all ease-in-out;
-  -webkit-transition: 0.2s all ease-in-out;
-  -moz-transition: 0.2s all ease-in-out;
-  -ms-transition: 0.2s all ease-in-out;
-  -o-transition: 0.2s all ease-in-out; 
+  -webkit-transition: 0.4s all ease-in-out;
+  -moz-transition: 0.4s all ease-in-out;
+  -ms-transition: 0.4s all ease-in-out;
+  -o-transition: 0.4s all ease-in-out;
   letter-spacing: 1px;
-}
+} */
  
 .products-tile-revers .product-detail-box {  
-  background: rgba(0,0,0,0.3);
+  /* background: rgba(0,0,0,0.3); */
   color: #fff;
   backdrop-filter: blur(10px);
   border-radius: 20px; 
@@ -1131,10 +1179,10 @@ section {
   bottom:25px;
 
 }
-
+/* 
 .products-tile-revers .product-detail-box {  
   background: rgb(255 88 33 / 87%);
-}
+} */
 
 
 
@@ -1184,7 +1232,7 @@ section {
 
 .portfolio #portfolio-flters li:hover,
 .portfolio #portfolio-flters li.filter-active {
-  color: #ff5821;
+  color: var(--primary);
   background: #fff1ed;
 }
 
@@ -1204,35 +1252,48 @@ section {
   bottom: 0;
   z-index: 3;
   transition: all ease-in-out 0.3s;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(254, 135, 33, 0.7);
   padding: 15px;
+  padding-right: 50px;
+  -webkit-transition: all ease-in-out 0.3s;
+  -moz-transition: all ease-in-out 0.3s;
+  -ms-transition: all ease-in-out 0.3s;
+  -o-transition: all ease-in-out 0.3s;
+  color: #fff;
 }
 
 .portfolio .portfolio-item .portfolio-info h4 {
   font-size: 18px;
   color: #fff;
   font-weight: 600;
-  color: #473d3a;
+  /* color: #473d3a; */
 }
 
 .portfolio .portfolio-item .portfolio-info p {
-  color: #7f6d68;
+  /* color: #7f6d68; */
   font-size: 14px;
   margin-bottom: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .portfolio .portfolio-item .portfolio-info .preview-link,
 .portfolio .portfolio-item .portfolio-info .details-link {
-  position: absolute;
-  right: 40px;
+  height: 30px;
+  position: absolute; 
+  top: 0;
+  bottom:0;
+  right: 20px;
+  left: auto;
+  margin: auto;
   font-size: 24px;
-  top: calc(50% - 18px);
-  color: #635551;
+  color: #fff;
 }
 
 .portfolio .portfolio-item .portfolio-info .preview-link:hover,
 .portfolio .portfolio-item .portfolio-info .details-link:hover {
-  color: #ff5821;
+  color: var(--secondary);
 }
 
 .portfolio .portfolio-item .portfolio-info .details-link {
@@ -1287,11 +1348,11 @@ section {
   height: 12px;
   background-color: #fff;
   opacity: 1;
-  border: 1px solid #ff5821;
+  border: 1px solid var(--primary);
 }
 
 .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #ff5821;
+  background-color: var(--primary);
 }
 
 .portfolio-details .portfolio-info {
@@ -1372,7 +1433,7 @@ section {
 }
 
 .team .member .social a:hover {
-  color: #ff5821;
+  color: var(--primary);
 }
 
 .team .member .social i {
@@ -1444,7 +1505,7 @@ section {
 }
 
 .contact h2 {
-  color:#ff5821;
+  color:var(--primary);
   /* text-shadow: 1px -3px 2px #000; */
 }
 
@@ -1459,7 +1520,7 @@ section {
 
 .contact .info-box i {
   font-size: 32px;
-  color: #ff5821;
+  color: var(--primary);
   border-radius: 50%;
   padding: 8px;
   border: 2px dotted #ffded4;
@@ -1536,7 +1597,7 @@ section {
 
 .contact .php-email-form input:focus,
 .contact .php-email-form textarea:focus {
-  border-color: #ff5821;
+  border-color: var(--primary);
 }
 
 .contact .php-email-form input {
@@ -1548,7 +1609,7 @@ section {
 }
 
 .contact .php-email-form button[type=submit] {
-  background: #ff5821;
+  background: var(--primary);
   border: 0;
   padding: 10px 24px;
   color: #fff;
@@ -1611,7 +1672,7 @@ section {
 }
 
 .blog .entry .entry-title a:hover {
-  color: #ff5821;
+  color: var(--primary);
 }
 
 .blog .entry .entry-meta {
@@ -1656,7 +1717,7 @@ section {
 
 .blog .entry .entry-content .read-more a {
   display: inline-block;
-  background: #ff5821;
+  background: var(--primary);
   color: #fff;
   padding: 6px 20px;
   transition: 0.3s;
@@ -1720,7 +1781,7 @@ section {
 }
 
 .blog .entry .entry-footer a:hover {
-  color: #ff5821;
+  color: var(--primary);
 }
 
 .blog .entry .entry-footer .cats {
@@ -1829,7 +1890,7 @@ section {
 }
 
 .blog .blog-comments .comment h5 a:hover {
-  color: #ff5821;
+  color: var(--primary);
 }
 
 .blog .blog-comments .comment h5 .reply {
@@ -1930,7 +1991,7 @@ section {
 
 .blog .blog-pagination li.active,
 .blog .blog-pagination li:hover {
-  background: #ff5821;
+  background: var(--primary);
 }
 
 .blog .blog-pagination li.active a,
@@ -1981,7 +2042,7 @@ section {
   font-size: 16px;
   padding: 0 15px;
   margin: -1px;
-  background: #ff5821;
+  background: var(--primary);
   color: #fff;
   transition: 0.3s;
   border-radius: 0 4px 4px 0;
@@ -2011,7 +2072,7 @@ section {
 }
 
 .blog .sidebar .categories ul a:hover {
-  color: #ff5821;
+  color: var(--primary);
 }
 
 .blog .sidebar .categories ul a span {
@@ -2041,7 +2102,7 @@ section {
 }
 
 .blog .sidebar .recent-posts h4 a:hover {
-  color: #ff5821;
+  color: var(--primary);
 }
 
 .blog .sidebar .recent-posts time {
@@ -2077,8 +2138,8 @@ section {
 
 .blog .sidebar .tags ul a:hover {
   color: #fff;
-  border: 1px solid #ff5821;
-  background: #ff5821;
+  border: 1px solid var(--primary);
+  background: var(--primary);
 }
 
 .blog .sidebar .tags ul a span {
@@ -2165,7 +2226,7 @@ section {
 
 #footer .footer-top .footer-links ul a:hover {
   text-decoration: none;
-  color: #ff5821;
+  color: var(--primary);
 }
 
 #footer .footer-newsletter {
@@ -2205,7 +2266,7 @@ section {
   background: none;
   font-size: 16px;
   padding: 0 20px;
-  background: #ff5821;
+  background: var(--primary);
   color: #fff;
   transition: 0.3s;
   border-radius: 50px;
@@ -2225,7 +2286,7 @@ section {
 #footer .social-links a {
   font-size: 18px;
   display: inline-block;
-  background: #ff5821;
+  background: var(--primary);
   color: #fff;
   line-height: 1;
   padding: 8px 0;
